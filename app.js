@@ -89,3 +89,5 @@ function showImage(n) {
 }
 
 showImage(index);
+
+// tapArrow
