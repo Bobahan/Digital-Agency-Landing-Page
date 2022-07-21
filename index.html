@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/268e341a62.js" crossorigin="anonymous"></script>
+    <title>Digital Agency</title>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header_logo">Digital Agency</div>
+            <nav class="nav">
+                <a class="nav__link" href="#">home</a>
+                <a class="nav__link" href="#" >about</a>
+                <a class="nav__link" href="#">testimonials</a>
+                <a class="nav__link" href="#">contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Intro -->
+<div class="intro">
+    <div class="container">
+        <div class="container__inner">
+            <div class="content">
+                <div class="title">
+                    <h1>Building digital products, brands <br> & experience</h1>
+                </div>
+                <div class="text">
+                    <p>Digital Agency is your online team mangement tool that easy and prompt</p>
+                </div>
+                <button class="subscribe_button" type="submit"><a href="">Contact us</a></button>
+            </div>
+            <div class="intro__item">
+                <div class="intro__img">
+                    <img src="./img/intro_img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Companies -->
+<section class="section section--companies">
+    <div class="container">
+        <div class="companies__title">
+            <p>Trusted by 4,000+ companies</p>
+        </div>
+        <div class="companies">
+            <div class="companies__item">
+                <div class="companies__img">
+                    <img src="./img/spotify.svg" alt="">
+                </div>
+            </div>
+            <div class="companies__item">
+                <div class="companies__img">
+                    <img src="./img/slack.svg" alt="">
+                </div>
+            </div>
+            <div class="companies__item">
+                <div class="companies__img">
+                    <img src="./img/dropbox.svg" alt="">
+                </div>
+            </div>
+            <div class="companies__item">
+                <div class="companies__img">
+                    <img src="./img/zoom.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Branding -->
+<section class="section">
+    <div class="container">
+        <div class="container__inner branding">
+            <div class="intro__item">
+                <div class="intro__img">
+                    <img src="./img/branding_img.svg" alt="">
+                </div>
+            </div>
+            <div class="content branding--content">
+                <div class="title branding--title">
+                    <h1>Branding & Design <br> system</h1>
+                </div>
+                <div class="text branding--text">
+                    <p>
+                        Commonly Used In The Graphic, Print & Publishing Industris For Previewing Visual Layout And Mockups
+                    </p>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slider -->
+<section class="section">
+    <div class="container">
+        <form class="range">
+            <div class="form-group range__slider">
+                <input type="range" step="500">
+            </div>
+            <div class="form-group range__value">
+                <label>Amount of the budget</label>
+                <span></span>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section">
+    <div class="container">
+        <div class="container__inner services">
+            <div class="content services--content">
+                <div class="title services--title">
+                    <h1>Custome & Plugin Development</h1>
+                </div>
+                <div class="text services--text">
+                    <p>
+                        Commonly Used In The Graphic, Print & Publishing Industris For Previewing Visual Layout And Mockups
+                    </p>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="intro__item">
+                <div class="intro__img">
+                    <img src="./img/services_img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section class="section">
+    <div class="container">
+        <div class="reviews">
+            <p class="suptitle">TESTIMONIALS</p>
+            <h1 class="title">Read What Other Have To Say</h1>
+        </div>
+
+        <div class="reviews__inner">
+            <div class="image fade">
+                <img src="./img/pic1.svg" alt="">
+            </div>
+            <div class="image fade">
+                <img src="./img/pic2.svg" alt="">
+            </div>
+            <div class="image fade">
+                <img src="./img/pic3.svg" alt="">
+            </div>
+            <i id="next" onclick="showImage(1)" class="fa-solid fa-angle-right"></i>
+            <i id="prev" onclick="showImage(-1)" class="fa-solid fa-angle-left"></i>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./app.js"></script>
+</body>
+</html>
+
