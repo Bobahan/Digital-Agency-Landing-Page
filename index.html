@@ -17,19 +17,25 @@
 <body>
 
 <!-- Header -->
-<header class="header">
+<header class="header header--fixed">
     <div class="container">
         <div class="header__inner">
             <div class="header_logo">Digital Agency</div>
             <nav class="nav">
-                <a class="nav__link" href="#">home</a>
-                <a class="nav__link" href="#" >about</a>
-                <a class="nav__link" href="#">testimonials</a>
-                <a class="nav__link" href="#">contact</a>
+                <div class="navbar__menu">
+                    <a class="nav__link" href="#">home</a>
+                    <a class="nav__link" href="#" >about</a>
+                    <a class="nav__link" href="#">testimonials</a>
+                    <a class="nav__link" href="#">contact</a>
+                </div>
             </nav>
+            <div class="nav-toggle">
+                <span class="nav-toggle__item"></span>
+            </div>
         </div>
     </div>
 </header>
+
 
 <!-- Intro -->
 <div class="intro">
@@ -102,19 +108,14 @@
                         Commonly Used In The Graphic, Print & Publishing Industris For Previewing Visual Layout And Mockups
                     </p>
                 </div>
-                <div class="icon">
-                    <i onclick="tapArrow()" class="fa-solid fa-arrow-right"></i>
-                </div>
-                <!-- <p hidden class="hidden__text"> 
-                    Erat, eget laoreet justo elementum et
-                </p> -->
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Slider -->
-<section class="section">
+<section class="section section--slider">
     <div class="container">
         <form class="range">
             <div class="form-group range__slider">
@@ -129,7 +130,7 @@
 </section>
 
 <!-- Services -->
-<section class="section">
+<section class="section section--services">
     <div class="container">
         <div class="container__inner services">
             <div class="content services--content">
@@ -141,9 +142,7 @@
                         Commonly Used In The Graphic, Print & Publishing Industris For Previewing Visual Layout And Mockups
                     </p>
                 </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
             <div class="intro__item">
                 <div class="intro__img">
@@ -155,7 +154,7 @@
 </section>
 
 <!-- Reviews -->
-<section class="section">
+<section class="section section-reviews">
     <div class="container">
         <div class="reviews">
             <p class="suptitle">TESTIMONIALS</p>
@@ -245,6 +244,8 @@
         </div>
     </div>
 </footer>
+
+
 <script src="./app.js"></script>
 </body>
 </html>

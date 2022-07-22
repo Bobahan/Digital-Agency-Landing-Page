@@ -5,7 +5,7 @@ class Slider {
     this.valueElement = valueElement
     this.budget = budget
 
-    this.rangeElement.addEventListener('input', this.updateSlider.bind(this))
+    this.rangeElement.addEventListener('input', this.updateSlider.bind(this)) // по клику будет срабатывать updateSlider
     }
 
     init() {
@@ -16,7 +16,6 @@ class Slider {
     this.updateSlider()
     }
 
-    // Format the money
     asMoney(value) {
         return '$' + parseFloat(value)
         .toLocaleString('en-US', { maximumFractionDigits: 2 })
@@ -59,16 +58,13 @@ let index = 0;
 function showImage(n) {
     index += n;
 
-    // получили все фотки и точки
     let images = document.getElementsByClassName('image');
     let dots = document.getElementsByClassName('dot');
 
-    // спрятвали все фотки
     for(let i = 0; i < images.length; i++) {
         images[i].style.display = 'none';
     }
 
-    // удаляем активный класс точек
     for(let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(' active', '');
     }
@@ -81,13 +77,11 @@ function showImage(n) {
         index = images.length - 1
     }
 
-    // отображает только та фотка next or previous
     images[index].style.display = 'block';
-    
-    // делает активной только текущую точку
+
     dots[index].className += ' active';
 }
 
 showImage(index);
 
-// tapArrow
+// Gamburger Menu
