@@ -47,10 +47,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .header_logo {
     font-size: 20px;
-    color: #272D38;
+    color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 
 /* Nav */
@@ -60,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__link {
     font-size: 18px;
-    color: #272D38;
+    color: #fff;;
     text-decoration: none;
     margin: 0 10px;
     transition: color .5s linear;
@@ -154,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* при классе active span по середине скроется */
 .nav-toggle.activeMenu .nav-toggle__item {
-    background:none
+    background: none
 }
 
 /* остальные две смещаются и образуют крестик*/
@@ -168,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
     transform-origin: left bottom;
     transform: rotate(-45deg)
     translateX(-2px);
+}
+
+.nav.activeMenu {
+    display: block;
 }
 
 @media (max-width: 770px) {
@@ -186,7 +191,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .nav__link {
-        display: block;
+        display: flex;
+        justify-content: center;
         margin: 0;
         padding: 8px 20px;
         color: #fff;
