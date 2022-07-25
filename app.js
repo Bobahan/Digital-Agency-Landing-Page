@@ -95,19 +95,14 @@ menu.addEventListener('click', function(event) {
 })
 
 // Scroll
-document.querySelectorAll("a[href^='#'").forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        let href = this.getAttribute("href").substring(1);
-        const scrollTarget = document.getElementById(href);
-        const topOffset = document.querySelector(".scrollTo").offsetHeight;
-        // const topOffset = 0; // если не нужен отступ сверху
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
-
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-    });
-});
+const anchors = document.querySelectorAll('a[href*="#"]')
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        const blockID = anchor.getAttribute('href').substr(1)
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
