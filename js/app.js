@@ -53,39 +53,39 @@ if (rangeElement) {
 
 
 // Carousel
-let index = 0;
+let index = 0
 
 function showImage(n) {
-    index += n;
+    index += n
 
-    let images = document.getElementsByClassName('image');
-    let dots = document.getElementsByClassName('dot');
+    let images = document.getElementsByClassName('image')
+    let dots = document.getElementsByClassName('dot')
 
     for(let i = 0; i < images.length; i++) {
-        images[i].style.display = 'none';
+        images[i].style.display = 'none'
     }
 
     for(let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(' active', '');
+        dots[i].className = dots[i].className.replace(' active', '')
     }
     
     if(index > images.length - 1) {
-        index = 0;
+        index = 0
     }
 
     if(index < 0) {
         index = images.length - 1
     }
 
-    images[index].style.display = 'block';
+    images[index].style.display = 'block'
 
-    dots[index].className += ' active';
+    dots[index].className += ' active'
 }
 
-showImage(index);
+showImage(index)
 
 // Gamburger Menu  
-let menu = document.querySelector('.nav-toggle');
+let menu = document.querySelector('.nav-toggle')
 let nav = document.querySelector('.nav')
 
 menu.addEventListener('click', function(event) {
@@ -105,4 +105,37 @@ for (let anchor of anchors) {
             block: 'start'
         })
     })
+}
+
+
+// Accordion
+let accordion = document.getElementById('accordion')
+
+accordion.addEventListener('click', change)
+
+function change(event) {
+    let target = event.target
+    if(target.tagName !== 'H3') return
+    if(target.classList.contains('select')) {
+        hideAll()
+    } else {
+        hideAll()
+        target.classList.add('select')
+        showText(target.nextElementSibling)
+    }
+}
+
+function hideAll() {
+    let h3Elem = accordion.querySelectorAll('h3')
+    let divElem = accordion.querySelectorAll('div')
+    for(let i = 0; i < h3Elem.length; i++) {
+        h3Elem[i].classList.remove('select')
+    }
+    for(let i = 0; i <divElem.length; i++) {
+        divElem[i].style.height = '0'
+    }
+}
+
+function showText(textEl) {
+    textEl.style.height = textEl.scrollHeight + 'px'
 }

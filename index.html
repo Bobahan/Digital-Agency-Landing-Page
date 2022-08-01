@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,8 +20,8 @@
 <header class="header header--fixed activeMenu">
     <div class="container">
         <div class="header__inner">
-            <div class="header_logo">Digital Agency</div>
-            <nav class="nav">
+            <div class="header_logo"><a href="#home">Digital Agency</a></div>
+            <nav class="nav" id="nav">
                 <a class="nav__link" href="#home">home</a>
                 <a class="nav__link" href="#about">about</a>
                 <a class="nav__link" href="#testimonials">testimonials</a>
@@ -32,8 +32,7 @@
             </button>
         </div>
     </div>
-</header>
-
+</header>   
 
 <!-- Intro -->
 <section class="intro" id="home">
@@ -217,8 +216,8 @@
                 <div class="footer__link">
                     <div class="footer__link__item">Guides</div>
                     <div class="footer__link__item">Blog</div>
-                    <div class="footer__link__item">Cuistomer Stories</div>
-                    <div class="footer__link__item">Glossery</div>
+                    <div class="footer__link__item">Customer Stories</div>
+                    <div class="footer__link__item">FAQ</div>
                 </div>
             </div>
             <div class="footer__item">
@@ -243,7 +242,41 @@
     </div>
 </footer>
 
-<script src="./app.js"></script>
+<section class="section faq">
+    <div class="container">
+        <div id="accordion">
+            <h3>How to make order?</h3>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam soluta aperiam ut! Pariatur iusto praesentium a voluptates 
+                    esse laborum consectetur ipsam officia velit tenetur odit quas atque, 
+                    voluptate impedit nesciunt?
+                </p>
+            </div>
+            <h3>How to make order?</h3>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam soluta aperiam ut! Pariatur iusto praesentium a voluptates 
+                    esse laborum consectetur ipsam officia velit tenetur odit quas atque, 
+                    voluptate impedit nesciunt?
+                </p>
+            </div>
+            <h3>How to make order?</h3>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam soluta aperiam ut! Pariatur iusto praesentium a voluptates 
+                    esse laborum consectetur ipsam officia velit tenetur odit quas atque, 
+                    voluptate impedit nesciunt?
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./js/app.js"></script>
 </body>
 </html>
 

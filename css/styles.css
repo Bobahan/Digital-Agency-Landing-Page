@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+
+}
+
 .container {
     width: 100%;
     max-width: 1300px;
@@ -45,13 +50,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 0 0;
 }
 
-.header_logo {
+.header_logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    cursor: pointer;
 }
 
 /* Nav */
@@ -619,7 +626,45 @@ img {
     cursor: pointer;
 }
 
+/* Accordion */
+#accordion {
+    margin: 20px 0;
+}
 
+#accordion > h3 {
+    color: blue;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: .5em .5em .5em .7em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+    padding: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#accordion > h3.select {
+    border: 1px solid #003eff;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    font-weight: normal;
+    color: #ffffff;
+}
+
+#accordion > div {
+    height: 0;
+    overflow: hidden;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: height 1s;
+}
+
+
+/* Responsive  */
 @media (max-width:990px) {
     /* Intro */
     .content {
